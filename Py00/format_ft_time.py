@@ -1,0 +1,10 @@
+from datetime import datetime
+now = datetime.now()
+epoch = datetime(1970, 1, 1)
+seconds_since_epoch = (now - epoch).total_seconds()
+formatted_seconds = "{:,.4f}".format(seconds_since_epoch)
+print("Seconds since January 1, 1970:", formatted_seconds)
+scientific_notation = "{:.2e}".format(seconds_since_epoch)
+print("Seconds in scientific notation:", scientific_notation)
+formatted_date = now.strftime("%b %d %Y")
+print("Formatted date:", formatted_date)
